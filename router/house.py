@@ -14,7 +14,7 @@ router = APIRouter(prefix='/houses',
     response_description= 'List of Avaliable Houses within an Estate',
     description='This GET endpoint fetches all records of houses that are within the parsed estate'
 )
-def get_all_estate(request:house):
+def get_all_estate(request:house.estateFetch):
     """
     This endpoint fetches all Houses Dependent on the Estate being Called.
     """
