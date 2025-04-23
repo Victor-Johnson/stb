@@ -3,7 +3,7 @@ from typing import Optional
 from utils import messages
 from schemas import house
 
-router = APIRouter(prefix='/houses',
+router = APIRouter(prefix='/v1/houses',
                    tags=['house'])
 
 @router.get(
@@ -18,6 +18,7 @@ def get_all_estate(request:house.estateFetch):
     """
     This endpoint fetches all Houses Dependent on the Estate being Called.
     """
+    request.estate(['Admin.estate_id'])
     return {
         "status_code": status.HTTP_200_OK,
         "message": messages["1"],
