@@ -1,0 +1,3 @@
+APP_ENV=prod uvicorn main:app --reload
+APP_ENV=test pytest
+APP_ENV=dev uvicorn main:app --reload
